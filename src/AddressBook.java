@@ -1,34 +1,36 @@
 
 import java.util.*;
 public class AddressBook {
-	public BuddyInfo b;
+	//public BuddyInfo b;
 	public ArrayList<BuddyInfo> A;
+	
 	AddressBook()
 	{
 		A = new ArrayList<BuddyInfo>();
-		test();
+
 	}
+	
 	AddressBook(BuddyInfo c)
 	{
 		A = new ArrayList<BuddyInfo>();
 		A.add(c);
 	}
 	
-	public void addBuddy(String BuddyName, String BuddyAddress, String buddyUniversity,int BuddyPhone, int BuddyAge)
+	public void addb(BuddyInfo b)
 	{
-		A.add(new BuddyInfo(BuddyName,BuddyAddress,buddyUniversity,BuddyPhone,BuddyAge));
-	}
-	public String getName(int i)
-	{
-		return A.get(i).getBuddyName();
+		A.add(b);
 	}
 	
-	public void test()
+	public void addBuddy(String s, String t, int i) // name , add, phone
 	{
-		BuddyInfo Buddy = new BuddyInfo();
-		Buddy.setBuddyName("Homer");
-		Buddy.setBuddyAddress("742 Evergreen Terrace");
-		A.add(Buddy);
+		 BuddyInfo b;
+		 b =new BuddyInfo(s,t,i);
+		 A.add(b);
 	}
+	
+	public BuddyInfo getBuddy(int i)
+	{
+		return A.get(i);
+	}	
 
 }

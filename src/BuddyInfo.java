@@ -1,4 +1,3 @@
-import java.lang.*;
 
 public class BuddyInfo {
 
@@ -7,86 +6,37 @@ public class BuddyInfo {
 	 */
     String BuddyName;
     String BuddyAddress; 
-    String buddyUniversity;
     int BuddyPhone;
-    int BuddyAge;
+
     
     
-    
-    public BuddyInfo()
-    {
-    	
-    }
-	public BuddyInfo(String BuddyName, String BuddyAddress, String buddyUniversity,int BuddyPhone, int BuddyAge)
+	public BuddyInfo(String BuddyName, String BuddyAddress, int BuddyPhone)
 	{
 		this.BuddyName = BuddyName;
 		this.BuddyAddress = BuddyAddress;
-		this.BuddyAge = BuddyAge;
 		this.BuddyPhone = BuddyPhone;
-		this.buddyUniversity = buddyUniversity;
 	}
+	
+  
+
      	
-	public String getBuddyName() {
-		return BuddyName;
-	}
-
-
-
-
-
 
 	public void setBuddyName(String buddyName) {
 		BuddyName = buddyName;
 	}
 
-
-
-
-
-
-	public String getBuddyAddress() {
-		return BuddyAddress;
+	public String getBuddyName() {
+		return BuddyName;
 	}
-
-
-
-
 
 
 	public void setBuddyAddress(String buddyAddress) {
 		BuddyAddress = buddyAddress;
 	}
-
-
-
-
-
-
-	public String getBuddyUniversity() {
-		return buddyUniversity;
+	
+	public String getBuddyAddress() {
+		return BuddyAddress;
 	}
-
-
-
-
-
-
-	public void setBuddyUniversity(String buddyUniversity) {
-		this.buddyUniversity = buddyUniversity;
-	}
-
-
-
-
-
-
-	public int getBuddyPhone() {
-		return BuddyPhone;
-	}
-
-
-
-
 
 
 	public void setBuddyPhone(int buddyPhone) {
@@ -94,43 +44,15 @@ public class BuddyInfo {
 	}
 
 
-
-
-
-
-	public int getBuddyAge() {
-		return BuddyAge;
+	public int getBuddyPhone() {
+		return BuddyPhone;
 	}
-
-
-
-
-
-
-	public void setBuddyAge(int buddyAge) {
-		BuddyAge = buddyAge;
+	
+	public String tostr()
+	{
+		String s = "";
+		s = s + "Buddy Name : " + getBuddyName() + ", Buddy Phone :" + getBuddyPhone()+ ", Buddy Address :" + getBuddyAddress();
+		return s;
 	}
-
-
-
-
-
-
-	/**public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("Nishant Bhasin - 100822060");
-		System.out.println("Hello World!");
-		BuddyInfo Buddy;
-		Buddy = new BuddyInfo();
-		Buddy.setBuddyName("Homer");
-		Buddy.setBuddyAddress("742 Evergreen Terrace");
-		System.out.println("Name : " +Buddy.getBuddyName());
-		System.out.println("Address : " +Buddy.getBuddyAddress());
-
-	}
-	**/
-
-
-
 
 }
